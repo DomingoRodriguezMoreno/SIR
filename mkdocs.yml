@@ -1,0 +1,6 @@
+site_name: My Docs
+nav:
+  - Inicio: index.md
+  - Documento: prueba.md
+theme:
+  name: 'material'

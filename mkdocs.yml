@@ -1,6 +1,89 @@
-site_name: My Docs
+site_name: SRI
+
+#nav:
+#    - Inicio: index.md
+#    - Introducción: 00_introduccion.md
+#    - Instalación: 01_instalacion.md
+#    - Conceptos Clave: 
+#        - Conceptos Clave: 02_conceptos_clave.md
+#        - Imágenes: docker/imagenes.md
+#        - Contenedores: docker/contenedores.md
+#        - Volúmenes: docker/volumenes.md
+#        - Redes: docker/redes.md 
+#    - About:
+#        - License: license.md
+#        - Release Notes: release-notes.md
 nav:
-  - Inicio: index.md
-  - Documento: prueba.md
+  - ./index.md
+  - prueba: ./prueba.md
+
 theme:
-  name: 'material'
+    features:
+        - navigation.top
+        - navigation.top.sticky
+        - navigation.tabs
+        - navigation.indexes
+
+    language : es
+
+    name: 'material'
+    palette:
+
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+
+# gigante
+      primary: blue grey
+      accent: green
+
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+# gigante
+      primary: blue grey
+      accent: green
+
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+# Extensions
+markdown_extensions:
+  - footnotes
+  # - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  # - pymdownx.superfences
+  # - pymdownx.details
+  # - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - def_list
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - roamlinks
+  - mermaid2
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js 
+
+extra:
+  static:
+    - carpe
